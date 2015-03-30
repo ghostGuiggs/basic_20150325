@@ -1,0 +1,29 @@
+{# src/BlogDemoBundle/Resources/views/BlogDemo/modifier.html.twig #}
+
+{% extends "BlogDemoBundle::bundleLayout.html.twig" %}
+
+{% block title %}
+    Modification d'un article  - {{ parent() }}
+{% endblock %}
+
+{% block sdzblog_body %}
+    <h2>Modifier un article</h2>
+    {% include "BlogDemoBundle:BlogDemo:formulaire.html.twig" %}
+    
+    <p>
+    Vous éditez un article déjà existant, ne le changez pas trop pour éviter aux membres de ne pas comprendre
+    ce qu'il se passe.
+    </p>
+    
+    <p>
+        <a href="{{ path('sdzblog_accueil') }}" class="btn">
+            <i class="icon-chevron-left"></i>Retour à la liste
+        </a>
+        <a href="{{ path('sdzblog_voir', {'id': article.id}) }}" class="btn">
+            <i class="icon-edit"></i>Retour a l'article
+        </a>
+        <a href="{{ path('sdzblog_supprimer', {'id': article.id}) }}" class="btn">
+            <i class="icon-trash"></i>Supprimer l'article
+        </a>
+    </p>
+{% endblock %}

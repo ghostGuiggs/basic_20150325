@@ -1,0 +1,20 @@
+{# src/BlogDemoBundle/Resources/views/bundleLayout.html.twig #}
+
+{% extends "::layout.html.twig" %}
+{# Heritage du Layout general defini dans app/Ressources/views/layout.html.twig #}
+
+{% block title %}
+    Ghost {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {# On définit un sous-titre commun à toutes les pages du bundle, par exemple #}
+    <h1>Blog</h1>
+    <hr>
+    
+    {# On définit un nouveau bloc, que les vues du bundle pourront remplir #}
+    {% block sdzblog_body %}
+        
+    {% endblock %}
+
+{% endblock %}

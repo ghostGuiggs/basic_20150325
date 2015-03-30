@@ -1,0 +1,26 @@
+{# src/BlogDemoBundle/Resources/views/BlogDemo/modifier.html.twig #}
+
+{% extends "BlogDemoBundle::bundleLayout.html.twig" %}
+
+{% block title %}
+    Ajout d'un article  - {{ parent() }}
+{% endblock %}
+
+{% block sdzblog_body %}
+    <h2>Ajouter un article</h2>
+    {% include "BlogDemoBundle:BlogDemo:formulaire.html.twig" %}
+    
+    <p>
+    Vous ajouez un nouvel article
+    Attention : cet article sera ajoute direcetement sur la page d'accueil apres validation du formulaire.
+    </p>
+    
+    <p>
+        <a href="{{ path('sdzblog_accueil') }}" class="btn">
+            <i class="icon-chevron-left"></i>Retour à la liste
+        </a>
+        <a href="{{ path('sdzblog_supprimer', {'id': article.id}) }}" class="btn">
+            <i class="icon-trash"></i>Supprimer l'article
+        </a>
+    </p>
+{% endblock %}

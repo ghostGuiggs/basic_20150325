@@ -1,0 +1,16 @@
+{# src/BlogDemoBundle/Resources/views/BlogDemo/blog.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bienvenue sur ma première page avec le Site du Zéro !</title>
+    </head>
+    <body>
+        <h1>Hello {{ nom }} !</h1>
+        <p>
+        Le Hello World est un grand classique en programmation.<br>
+        Il signifie énormément, car cela veut dire que vous avez réussi à exécuter le programme pour accomplir une tache simple : <h4>afficher ce hello world ! </h4></p>
+        {# Dans une vue Twig, en considérant bien sûr que la variable article_id est disponible #}
+        <a href="{{ path('sdzblog_voir', { 'id': article_id }) }}">Lien vers l'article d'id {{ article_id }}</a>
+        </p>
+    </body>
+</html>

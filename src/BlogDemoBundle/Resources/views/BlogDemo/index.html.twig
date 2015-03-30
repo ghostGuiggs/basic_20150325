@@ -1,0 +1,27 @@
+{# src/BlogDemoBundle/Resources/views/BlogDemo/index.html.twig #}
+
+{% extends "BlogDemoBundle::bundleLayout.html.twig" %}
+
+{% block title %}
+    Accueil - {{ parent() }}
+{% endblock %}
+
+{% block sdzblog_body %}
+    <p>
+    {# On affiche tous les messages flash dont le nom est « info» #}
+    {% for message in app.session.flashbag.get('info') %} <p>{{ message | upper }}</p>
+    {% endfor %}
+    </p>
+
+    <h2>Liste des articles</h2>
+    <ul>
+        {% for article in articles %}
+        <li>
+            <a href="{{ path('sdzblog_voir', {'id': article.id}) }}">
+                {{article.titre }}</a> par {{ article.auteur }}, le {{ article.date|date('d/m/Y') }}
+        </li>
+        {% else %}
+        <li>Pas (encore !) d'articles</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,7 @@
+ouisend_admin_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: OuisendAdminBundle:Default:index }
+
+HelloTheWorld:
+    path:     /hello-world
+    defaults: { _controller: OuisendAdminBundle:Hello:index }
