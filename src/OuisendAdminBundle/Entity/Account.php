@@ -10,8 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="accounts")
  * @ORM\Entity(repositoryClass="OuisendAdminBundle\Entity\AccountRepository")
  */
-class Account
-{
+class Account {
+
     /**
      * @var integer
      *
@@ -27,19 +27,24 @@ class Account
      * @ORM\Column(name="account_balance", type="int")
      */
     private $balance;
-    
+
+    /**
+     * @ORM\OneToOne(targetEntity="OuisendAdminBundle\Entity\User", cascade={"persist"})
+     */
+    private $user;
+
     /**
      * @var datetime
      *
      * @ORM\Column(name="creation_date", type="datetime")
      */
     private $creation_date;
-    
+
     /**
      * @var datetime
      *
      * @ORM\Column(name="update_date", type="datetime")
      */
     private $update_date;
-	
+
 }
