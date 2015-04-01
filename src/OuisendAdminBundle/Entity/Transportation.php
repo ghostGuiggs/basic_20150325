@@ -36,23 +36,11 @@ class Transportation
      */
     private $comment;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="travels")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+    /*
+     * @ORM\ManyToOne(targetEntity="Operation", inversedBy="operations")
+     * @ORM\JoinColumn(name="operation_id", referencedColumnName="id")
      */
-    private $user;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="City")
-     * @ORM\JoinColumn(name="departure_city_id", referencedColumnName="id")
-     **/
-    private $departure_city;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="City")
-     * @ORM\JoinColumn(name="arrival_city_id", referencedColumnName="id")
-     **/
-    private $arrival_city;
+    private $operation;
 
     /**
      * @ORM\ManyToOne(targetEntity="TransportationType")
@@ -61,10 +49,22 @@ class Transportation
     private $transportation_type;
 
     /**
-     * @ORM\ManyToOne(targetEntity="PackageSize")
-     * @ORM\JoinColumn(name="package_size_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="City")
+     * @ORM\JoinColumn(name="departure_city_id", referencedColumnName="id")
      **/
-    private $package_size;
+    private $departureCity;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="City")
+     * @ORM\JoinColumn(name="arrival_city_id", referencedColumnName="id")
+     **/
+    private $arrivalCity;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="PackageSize")
+     * @ORM\JoinColumn(name="pkg_size_id", referencedColumnName="id")
+     **/
+    private $packageSize;
     
     /**
      * @var time
@@ -76,7 +76,7 @@ class Transportation
     /**
      * @var time
      *
-     * @ORM\Column(name="time_to_meet_receiver", type="time")
+     * @ORM\Column(name="time_to_meet_sender", type="time")
      */
     private $ttm_sender;    
     

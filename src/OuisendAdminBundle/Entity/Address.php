@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Address
 {
+
     /**
      * @var integer
      *
@@ -22,9 +23,15 @@ class Address
     private $id;
 
     /**
-     * @var string
+     * @ORM\ManyToOne(targetEntity="Account")
+     * @ORM\JoinColumn(name="account_id", referencedColumnName="id")
+     **/
+    private $account;
+
+    /**
+     * @var text
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="description", type="text")
      */
     private $description;
 

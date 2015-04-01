@@ -73,7 +73,13 @@ class CommunicationTracking
      *
      * @ORM\Column(name="send_date", type="datetime")
      */
-    private $send_date;
-	
+    private $sendDate;
+    
+    /**
+     * @var datetime
+     *
+     * @ORM\Column(name="update_date", type="datetime")
+     */
+    private $updateDate;	
         
 }

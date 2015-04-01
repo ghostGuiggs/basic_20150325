@@ -22,17 +22,24 @@ class Message
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="Account")
      * @ORM\JoinColumn(name="sender_id", referencedColumnName="id")
      **/
     private $sender;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="Account")
      * @ORM\JoinColumn(name="receiver_id", referencedColumnName="id")
      **/
     private $receiver;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string")
+     */
+    private $title;
+	
     /**
      * @var string
      *
@@ -43,7 +50,22 @@ class Message
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="text")
+     * @ORM\Column(name="type", type="string")
      */
     private $type;
+
+    /**
+     * @var datetime
+     *
+     * @ORM\Column(name="creation_date", type="datetime")
+     */
+    private $creationDate;
+
+    /**
+     * @var datetime
+     *
+     * @ORM\Column(name="update_date", type="datetime")
+     */
+    private $updateDate;
+	
 }

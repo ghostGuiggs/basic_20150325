@@ -30,22 +30,22 @@ class Operation
     private $status;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="Account")
      * @ORM\JoinColumn(name="traveler_id", referencedColumnName="id")
      **/
-    private $travelerUser;
+    private $traveler;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="Account")
      * @ORM\JoinColumn(name="sender_id", referencedColumnName="id")
      **/
-    private $senderUser;
+    private $sender;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="Account")
      * @ORM\JoinColumn(name="receiver_id", referencedColumnName="id")
      **/
-    private $receiverUser;
+    private $receiver;
 
     /**
      * @var decimal
@@ -55,12 +55,12 @@ class Operation
     private $amount;
 
     /**
-     * @ORM\OneToMany(targetEntity="Package", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="Package", mappedBy="operation")
      */
     private $packages;
 
     /**
-     * @ORM\OneToMany(targetEntity="Transportation", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="Transportation", mappedBy="operation")
      */
     private $transportations;
     

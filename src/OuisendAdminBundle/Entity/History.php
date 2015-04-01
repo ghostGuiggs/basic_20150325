@@ -30,7 +30,7 @@ class History
 
     /**
      * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumn(name="action_by", referencedColumnName="id")
+     * @ORM\JoinColumn(name="by", referencedColumnName="id")
      **/
     private $by;
 

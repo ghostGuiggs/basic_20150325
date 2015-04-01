@@ -24,7 +24,7 @@ class Account {
     /**
      * @var integer
      *
-     * @ORM\Column(name="account_balance", type="int")
+     * @ORM\Column(name="balance", type="int")
      */
     private $balance;
 
@@ -38,13 +38,24 @@ class Account {
      *
      * @ORM\Column(name="creation_date", type="datetime")
      */
-    private $creation_date;
+    private $creationDate;
 
     /**
      * @var datetime
      *
      * @ORM\Column(name="update_date", type="datetime")
      */
-    private $update_date;
+    private $updateDate;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Operation", mappedBy="account")
+     */
+    private $operations;
+        
+    /**
+     * @ORM\OneToMany(targetEntity="Address", mappedBy="account")
+     */
+    private $addresses;
+    
 
 }

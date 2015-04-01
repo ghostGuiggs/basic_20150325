@@ -22,21 +22,21 @@ class Complaint
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumn(name="sender_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Account")
+     * @ORM\JoinColumn(name="account_id", referencedColumnName="id")
      **/
-    private $client;
+    private $account;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumn(name="receiver_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Operation")
+     * @ORM\JoinColumn(name="operation_id", referencedColumnName="id")
      **/
     private $operation;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="text")
+     * @ORM\Column(name="type", type="string")
      */
     private $type;
 

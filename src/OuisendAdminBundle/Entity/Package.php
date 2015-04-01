@@ -23,8 +23,15 @@ class Package
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="text")
+     */
+    private $status;
+
+    /**
      * @ORM\ManyToOne(targetEntity="PackageSize")
-     * @ORM\JoinColumn(name="size_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="pkg_size_id", referencedColumnName="id")
      **/
     private $package_size;
 
@@ -40,12 +47,5 @@ class Package
      * @ORM\Column(name="weight", type="float")
      */
     private $weight;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="status", type="text")
-     */
-    private $status;
 	
 }

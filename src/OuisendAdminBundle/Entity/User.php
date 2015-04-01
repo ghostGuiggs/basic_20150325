@@ -23,23 +23,6 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Transportation", mappedBy="user")
-     */
-    private $transportations;
-    
-    // or 
-
-    /**
-     * @ORM\OneToMany(targetEntity="Operation", mappedBy="user")
-     */
-    private $operations;
-        
-    /**
-     * @ORM\OneToMany(targetEntity="Address", mappedBy="user")
-     */
-    private $addresses;
-    
-    /**
      * @var datetime
      *
      * @ORM\Column(name="creation_date", type="datetime")
@@ -52,12 +35,6 @@ class User extends BaseUser
      * @ORM\Column(name="update_date", type="datetime")
      */
     private $update_date;
-    
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-    }
 
     // HWIOAuthBundle
     /**
@@ -79,4 +56,11 @@ class User extends BaseUser
      * @ORM\Column(name="google_access_token", type="string", length=255, nullable=true)
      */
     protected $google_access_token;
+    
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+    
 }

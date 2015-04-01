@@ -5,13 +5,14 @@ namespace OuisendAdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Message
+ * Payment
  *
- * @ORM\Table(name="messages")
- * @ORM\Entity(repositoryClass="OuisendAdminBundle\Entity\MessageRepository")
+ * @ORM\Table(name="payment")
+ * @ORM\Entity(repositoryClass="OuisendAdminBundle\Entity\PaymentRepository")
  */
-class Message
+class Payment
 {
+
     /**
      * @var integer
      *
@@ -22,28 +23,43 @@ class Message
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumn(name="sender_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Account")
+     * @ORM\JoinColumn(name="account_id", referencedColumnName="id")
      **/
-    private $sender;
+    private $account;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumn(name="receiver_id", referencedColumnName="id")
-     **/
-    private $receiver;
+     * @var text
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="text")
+     * @ORM\Column(name="street1", type="string", length=255)
      */
-    private $content;
+    private $street1;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="text")
+     * @ORM\Column(name="street2", type="string", length=255)
      */
-    private $type;
+    private $street2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="complement_Payment", type="string", length=255)
+     */
+    private $complementPayment;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="phone_number", type="string", length=255)
+     */
+    private $phoneNumber;
 }
