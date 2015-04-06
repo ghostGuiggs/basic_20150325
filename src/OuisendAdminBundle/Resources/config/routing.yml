@@ -1,7 +1,175 @@
-ouisend_admin_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: OuisendAdminBundle:Default:index }
+    
+ouisendadmin_default: 
+    path:     /
+    defaults: { _controller: OuisendAdminBundle:Default:index}
+    requirements:
+        page: \d* 
+    
+#################################################################################
+# Dev : 
+# Status : KO
+# Last update : 
+# Controller :       
 
-HelloTheWorld:
-    path:     /hello-world
-    defaults: { _controller: OuisendAdminBundle:Hello:index }
+ouisendadmin_account_detail:
+    path:     /detail/{id}
+    defaults: { _controller: OuisendAdminBundle::detail }
+    requirements:
+        id: \d* 
+
+ouisendadmin_account_add:
+    path:     /add
+    defaults: { _controller: OuisendAdminBundle::add }
+
+ouisendadmin_account_edit:
+    path:     /edit/{id}
+    defaults: { _controller: OuisendAdminBundle::edit }
+    requirements:
+        id: \d* 
+
+ouisendadmin_account_delete:
+    path:     /delete/{id}
+    defaults: { _controller: OuisendAdminBundle::delete }
+    requirements:
+        id: \d* 
+
+ouisendadmin_account_validate:
+    path:     /validate/{id}
+    defaults: { _controller: OuisendAdminBundle::validate }
+    requirements:
+        id: \d* 
+
+#################################################################################
+# Dev : 
+# Status : LOADING
+# Last update : 
+# Controller : 
+        
+ouisendadmin_detail:
+    path:     /detail/{id}
+    defaults: { _controller: OuisendAdminBundle::detail }
+    requirements:
+        id: \d* 
+
+ouisendadmin_add:
+    path:     /add
+    defaults: { _controller: OuisendAdminBundle::add }
+
+ouisendadmin_edit:
+    path:     /edit/{id}
+    defaults: { _controller: OuisendAdminBundle::edit }
+    requirements:
+        id: \d* 
+
+ouisendadmin_delete:
+    path:     /delete/{id}
+    defaults: { _controller: OuisendAdminBundle::delete }
+    requirements:
+        id: \d* 
+
+ouisendadmin_validate:
+    path:     /validate/{id}
+    defaults: { _controller: OuisendAdminBundle::validate }
+    requirements:
+        id: \d* 
+
+#################################################################################
+# Dev : 
+# Status : LOADING
+# Last update : 
+# Controller : 
+        
+ouisendadmin_detail:
+    path:     /detail/{id}
+    defaults: { _controller: OuisendAdminBundle::detail }
+    requirements:
+        id: \d* 
+
+ouisendadmin_add:
+    path:     /add
+    defaults: { _controller: OuisendAdminBundle::add }
+
+ouisendadmin_edit:
+    path:     /edit/{id}
+    defaults: { _controller: OuisendAdminBundle::edit }
+    requirements:
+        id: \d* 
+
+ouisendadmin_delete:
+    path:     /delete/{id}
+    defaults: { _controller: OuisendAdminBundle::delete }
+    requirements:
+        id: \d* 
+
+ouisendadmin_validate:
+    path:     /validate/{id}
+    defaults: { _controller: OuisendAdminBundle::validate }
+    requirements:
+        id: \d* 
+
+#################################################################################
+# Dev : 
+# Status : LOADING
+# Last update : 
+# Controller :  
+     
+ouisendadmin_detail:
+    path:     /detail/{id}
+    defaults: { _controller: OuisendAdminBundle::detail }
+    requirements:
+        id: \d* 
+
+ouisendadmin_add:
+    path:     /add
+    defaults: { _controller: OuisendAdminBundle::add }
+
+ouisendadmin_edit:
+    path:     /edit/{id}
+    defaults: { _controller: OuisendAdminBundle::edit }
+    requirements:
+        id: \d* 
+
+ouisendadmin_delete:
+    path:     /delete/{id}
+    defaults: { _controller: OuisendAdminBundle::delete }
+    requirements:
+        id: \d* 
+
+ouisendadmin_validate:
+    path:     /validate/{id}
+    defaults: { _controller: OuisendAdminBundle::validate }
+    requirements:
+        id: \d* 
+#################################################################################
+# Dev : 
+# Status : LOADING
+# Last update : 
+# Controller : 
+        
+ouisendadmin_detail:
+    path:     /detail/{id}
+    defaults: { _controller: OuisendAdminBundle::detail }
+    requirements:
+        id: \d* 
+
+ouisendadmin_add:
+    path:     /add
+    defaults: { _controller: OuisendAdminBundle::add }
+
+ouisendadmin_edit:
+    path:     /edit/{id}
+    defaults: { _controller: OuisendAdminBundle::edit }
+    requirements:
+        id: \d* 
+
+ouisendadmin_delete:
+    path:     /delete/{id}
+    defaults: { _controller: OuisendAdminBundle::delete }
+    requirements:
+        id: \d* 
+
+ouisendadmin_validate:
+    path:     /validate/{id}
+    defaults: { _controller: OuisendAdminBundle::validate }
+    requirements:
+        id: \d* 

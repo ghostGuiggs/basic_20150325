@@ -17,7 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
-            // new OuisendAdminBundle\OuisendAdminBundle(),
+            new OuisendAdminBundle\OuisendAdminBundle(),
             new BlogDemoBundle\BlogDemoBundle(),
         );
 

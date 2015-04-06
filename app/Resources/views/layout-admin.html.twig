@@ -1,5 +1,5 @@
-{# app/Resources/views/layout.html.twig #}
-{# Ceci va etre le layout de toute l'application #}
+{# app/Resources/views/layout-admin.html.twig #}
+{# Ceci va etre le layout de toute la partie admin de l'application #}
 
 <!DOCTYPE HTML>
 <html> <head>
@@ -12,22 +12,21 @@
 <body>
 	<div class="container">
         <div id="header" class="hero-unit">
-            <h1>Mon Projet Symfony2</h1>
-            <p>Ce projet est propulsé par Symfony2, et construit grâce au tutoriel du siteduzero.</p>
+            <h1>Ouisend Admin</h1>
             <p>
-                <a class="btn btn-primary btn-large"
-            href="http://www.siteduzero.com/informatique/tutoriels/developpez-votre- site-web-avec-le-framework-symfony2">
-            Lire le tutoriel »</a>
+                <a class="btn btn-primary btn-large" href="#"> Ici sera le logo </a>
             </p>
         </div>
         <div class="row">
             <div id="menu" class="span3">
-                <h3>Le blog</h3>
+                <h3>Ecran de base</h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="{{ path('sdzblog_accueil') }}">Accueil du blog</a></li>
-                    <li><a href="{{ path('sdzblog_ajouter') }}">Ajouter un article</a></li>
+                    <li><a href="{{ path('ouisendadmin_accueil') }}">Home</a></li>
+                    <li><a href="{{ path('ouisendadmin_account') }}">Accounts</a></li>
+					<li><a href="{{ path('ouisendadmin_complaint') }}">Complaints</a></li>
+					<li><a href="{{ path('ouisendadmin_complaint') }}">Validations</a></li>
                 </ul>
-                {{ render(controller("BlogDemoBundle:BlogDemo:menu", {'nombre': 3})) }}
+                {{ render(controller("OuisendAdminBundle:Home:menu")) }}
                 </div>
                 <div id="content" class="span9">
                 {% block body %}
@@ -38,7 +37,7 @@
         <hr>
         
         <footer>
-            <p>The sky's the limit © 2012 and beyond.</p>
+            <p>To be defined.</p>
         </footer>
     </div>
 	
