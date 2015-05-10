@@ -82,4 +82,221 @@ class CommunicationTracking
      */
     private $updateDate;	
         
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set subject
+     *
+     * @param string $subject
+     * @return CommunicationTracking
+     */
+    public function setSubject($subject)
+    {
+        $this->subject = $subject;
+
+        return $this;
+    }
+
+    /**
+     * Get subject
+     *
+     * @return string 
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return CommunicationTracking
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * Set content_html
+     *
+     * @param string $contentHtml
+     * @return CommunicationTracking
+     */
+    public function setContentHtml($contentHtml)
+    {
+        $this->content_html = $contentHtml;
+
+        return $this;
+    }
+
+    /**
+     * Get content_html
+     *
+     * @return string 
+     */
+    public function getContentHtml()
+    {
+        return $this->content_html;
+    }
+
+    /**
+     * Set content_text
+     *
+     * @param string $contentText
+     * @return CommunicationTracking
+     */
+    public function setContentText($contentText)
+    {
+        $this->content_text = $contentText;
+
+        return $this;
+    }
+
+    /**
+     * Get content_text
+     *
+     * @return string 
+     */
+    public function getContentText()
+    {
+        return $this->content_text;
+    }
+
+    /**
+     * Set creation_date
+     *
+     * @param \DateTime $creationDate
+     * @return CommunicationTracking
+     */
+    public function setCreationDate($creationDate)
+    {
+        $this->creation_date = $creationDate;
+
+        return $this;
+    }
+
+    /**
+     * Get creation_date
+     *
+     * @return \DateTime 
+     */
+    public function getCreationDate()
+    {
+        return $this->creation_date;
+    }
+
+    /**
+     * Set sendDate
+     *
+     * @param \DateTime $sendDate
+     * @return CommunicationTracking
+     */
+    public function setSendDate($sendDate)
+    {
+        $this->sendDate = $sendDate;
+
+        return $this;
+    }
+
+    /**
+     * Get sendDate
+     *
+     * @return \DateTime 
+     */
+    public function getSendDate()
+    {
+        return $this->sendDate;
+    }
+
+    /**
+     * Set updateDate
+     *
+     * @param \DateTime $updateDate
+     * @return CommunicationTracking
+     */
+    public function setUpdateDate($updateDate)
+    {
+        $this->updateDate = $updateDate;
+
+        return $this;
+    }
+
+    /**
+     * Get updateDate
+     *
+     * @return \DateTime 
+     */
+    public function getUpdateDate()
+    {
+        return $this->updateDate;
+    }
+
+    /**
+     * Set from
+     *
+     * @param \OuisendAdminBundle\Entity\User $from
+     * @return CommunicationTracking
+     */
+    public function setFrom(\OuisendAdminBundle\Entity\User $from = null)
+    {
+        $this->from = $from;
+
+        return $this;
+    }
+
+    /**
+     * Get from
+     *
+     * @return \OuisendAdminBundle\Entity\User 
+     */
+    public function getFrom()
+    {
+        return $this->from;
+    }
+
+    /**
+     * Set to
+     *
+     * @param \OuisendAdminBundle\Entity\User $to
+     * @return CommunicationTracking
+     */
+    public function setTo(\OuisendAdminBundle\Entity\User $to = null)
+    {
+        $this->to = $to;
+
+        return $this;
+    }
+
+    /**
+     * Get to
+     *
+     * @return \OuisendAdminBundle\Entity\User 
+     */
+    public function getTo()
+    {
+        return $this->to;
+    }
 }

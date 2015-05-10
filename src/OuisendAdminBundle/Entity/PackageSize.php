@@ -41,4 +41,83 @@ class PackageSize
      * @ORM\Column(name="ref_amount", type="decimal")
      */
     private $refAmount;    
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return PackageSize
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return PackageSize
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set refAmount
+     *
+     * @param string $refAmount
+     * @return PackageSize
+     */
+    public function setRefAmount($refAmount)
+    {
+        $this->refAmount = $refAmount;
+
+        return $this;
+    }
+
+    /**
+     * Get refAmount
+     *
+     * @return string 
+     */
+    public function getRefAmount()
+    {
+        return $this->refAmount;
+    }
 }

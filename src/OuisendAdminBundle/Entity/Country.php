@@ -53,4 +53,116 @@ class Country
      */
     private $prefixPhoneNumber;
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Country
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     * @return Country
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string 
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Set prefixPhoneNumber
+     *
+     * @param string $prefixPhoneNumber
+     * @return Country
+     */
+    public function setPrefixPhoneNumber($prefixPhoneNumber)
+    {
+        $this->prefixPhoneNumber = $prefixPhoneNumber;
+
+        return $this;
+    }
+
+    /**
+     * Get prefixPhoneNumber
+     *
+     * @return string 
+     */
+    public function getPrefixPhoneNumber()
+    {
+        return $this->prefixPhoneNumber;
+    }
+
+    /**
+     * Add cities
+     *
+     * @param \OuisendAdminBundle\Entity\City $cities
+     * @return Country
+     */
+    public function addCity(\OuisendAdminBundle\Entity\City $cities)
+    {
+        $this->cities[] = $cities;
+
+        return $this;
+    }
+
+    /**
+     * Remove cities
+     *
+     * @param \OuisendAdminBundle\Entity\City $cities
+     */
+    public function removeCity(\OuisendAdminBundle\Entity\City $cities)
+    {
+        $this->cities->removeElement($cities);
+    }
+
+    /**
+     * Get cities
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCities()
+    {
+        return $this->cities;
+    }
 }

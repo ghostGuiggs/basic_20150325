@@ -48,4 +48,106 @@ class Package
      */
     private $weight;
 	
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set status
+     *
+     * @param string $status
+     * @return Package
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return string 
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set weight
+     *
+     * @param float $weight
+     * @return Package
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
+
+        return $this;
+    }
+
+    /**
+     * Get weight
+     *
+     * @return float 
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * Set package_size
+     *
+     * @param \OuisendAdminBundle\Entity\PackageSize $packageSize
+     * @return Package
+     */
+    public function setPackageSize(\OuisendAdminBundle\Entity\PackageSize $packageSize = null)
+    {
+        $this->package_size = $packageSize;
+
+        return $this;
+    }
+
+    /**
+     * Get package_size
+     *
+     * @return \OuisendAdminBundle\Entity\PackageSize 
+     */
+    public function getPackageSize()
+    {
+        return $this->package_size;
+    }
+
+    /**
+     * Set operation
+     *
+     * @param \OuisendAdminBundle\Entity\Operation $operation
+     * @return Package
+     */
+    public function setOperation(\OuisendAdminBundle\Entity\Operation $operation = null)
+    {
+        $this->operation = $operation;
+
+        return $this;
+    }
+
+    /**
+     * Get operation
+     *
+     * @return \OuisendAdminBundle\Entity\Operation 
+     */
+    public function getOperation()
+    {
+        return $this->operation;
+    }
 }
